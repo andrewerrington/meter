@@ -64,7 +64,7 @@ class Meter:
         buf.append(SVGpath('M 0 -2 v 4','none','black',0.1))
 
         # Add reference mark for 'flattened' scale origin
-        if self.d<>0:
+        if self.d != 0:
             buf.append(SVGpath('M -2 %.2f h 4'%self.d,'none','black',0.1))
             buf.append(SVGpath('M 0 %.2f v 4'%(self.d-2),'none','black',0.1))
 
@@ -349,7 +349,7 @@ def SVGtextonpath(path_id,text,font,size,fill,stroke,startOffset=0):
         %(size,fill,stroke,font,path_id,startOffset,text)
 
 def main():
-    print __doc__
+    print(__doc__)
     return 0
 
 if __name__=='__main__':
